@@ -18,7 +18,15 @@ git clone https://github.com/dockersamples/example-voting-app.git
 
 ls  # example-voting-app
 
-cd example-voting-app
+mv example-voting-app voting-app    #Docker Compose uses the project folder name as a prefix for container names, networks, and volumes.
+
+Renaming the project folder makes container names cleaner and easier to manage.
+
+This helps during development, debugging, and running commands like docker ps or docker logs.
+
+
+cd voting-app
+
 
 docker compose up -d
 
@@ -46,7 +54,7 @@ The `vote` app will be running at [http://localhost:8080](http://localhost:8080)
 
 docker compose down
 
-docker compose up
+docker compose up -d
 
 Alternately, if you want to run it on a [Docker Swarm](https://docs.docker.com/engine/swarm/), first make sure you have a swarm. If you don't, run:
 
