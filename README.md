@@ -8,6 +8,7 @@ Download [Docker Desktop](https://www.docker.com/products/docker-desktop) for Ma
 
 This solution uses Python, Node.js, .NET, with Redis for messaging and Postgres for storage.
 
+```shell
 docker --version
 
 docker compose version
@@ -20,18 +21,20 @@ ls  # example-voting-app
 
 mv example-voting-app voting-app    #Docker Compose uses the project folder name as a prefix for container names, networks, and volumes.
 
+```
+
 Renaming the project folder makes container names cleaner and easier to manage.
 
 This helps during development, debugging, and running commands like docker ps or docker logs.
 
-
+```shell
 cd voting-app
 
 
 docker compose up -d
 
 docker ps
-
+```
 
 browser:
 
@@ -39,9 +42,9 @@ publicip:8080  ->for voting
 
 publicip:8081  for result
 
-
+```shell
 docker compose down
-
+```
 
 
 Run in this directory to build and run the app:
